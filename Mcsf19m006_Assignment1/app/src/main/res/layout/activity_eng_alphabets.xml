@@ -7,6 +7,16 @@
     android:orientation="vertical"
     android:gravity="bottom"
     tools:context=".EngAlphabets">
+   <ImageView
+       android:id="@+id/v1"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:contentDescription="TODO"></ImageView>
+    <ImageView
+        android:id="@+id/v2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="TODO"></ImageView>
 
     <Button
         android:id="@+id/button"
@@ -28,6 +38,7 @@ android:onClick="play"
         android:layout_height="wrap_content"
         android:text="stop"
         android:onClick="stop"/>
+
 
 
 </LinearLayout>

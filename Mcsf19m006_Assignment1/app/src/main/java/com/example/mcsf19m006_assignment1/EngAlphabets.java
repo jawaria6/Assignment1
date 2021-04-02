@@ -2,9 +2,11 @@ package com.example.mcsf19m006_assignment1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -13,10 +15,24 @@ public class EngAlphabets extends AppCompatActivity {
     MediaPlayer player;
  String [] AlphabetsPics;
     String [] Pictures;
+    ImageView alphabets;
+    ImageView words;
+    AnimationDrawable runingAlphabets;
+    AnimationDrawable runingWords;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eng_alphabets);
+      alphabets =findViewById(R.id.v1);
+      alphabets.setImageResource(R.drawable.runingalphabets);
+        words =findViewById(R.id.v2);
+        words.setImageResource(R.drawable.runinigpics);
+      runingAlphabets=(AnimationDrawable)alphabets.getDrawable();
+        runingWords=(AnimationDrawable)words.getDrawable();
+
+
+
 
 
     }
@@ -30,15 +46,23 @@ public class EngAlphabets extends AppCompatActivity {
                 }
             });
         }
+        runingAlphabets.start();
+        runingWords.start();
         player.start();
     }
     public  void pause(View v){
         if(player!=null) {
             player.pause();
         }
+        runingAlphabets.stop();
+        runingWords.stop();
+
     }
-    public  void stop(View v){
+    public  void stop(View v)
+    {
         stopPlayer();
+        runingAlphabets.stop();
+        runingWords.stop();
     }
     public  void stopPlayer(){
         if(player!=null){
