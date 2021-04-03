@@ -26,13 +26,6 @@ android:onClick="play"
         android:text="play" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="pause"
-        android:text="pause" />
-
-    <Button
         android:id="@+id/button4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

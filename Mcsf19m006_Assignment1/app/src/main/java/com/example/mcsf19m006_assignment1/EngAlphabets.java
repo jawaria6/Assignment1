@@ -2,6 +2,7 @@ package com.example.mcsf19m006_assignment1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.animation.ObjectAnimator;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -13,10 +14,12 @@ import java.util.ArrayList;
 
 public class EngAlphabets extends AppCompatActivity {
     MediaPlayer player;
+
  String [] AlphabetsPics;
     String [] Pictures;
     ImageView alphabets;
     ImageView words;
+
     AnimationDrawable runingAlphabets;
     AnimationDrawable runingWords;
 
@@ -25,6 +28,7 @@ public class EngAlphabets extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eng_alphabets);
       alphabets =findViewById(R.id.v1);
+
       alphabets.setImageResource(R.drawable.runingalphabets);
         words =findViewById(R.id.v2);
         words.setImageResource(R.drawable.runinigpics);
@@ -50,14 +54,7 @@ public class EngAlphabets extends AppCompatActivity {
         runingWords.start();
         player.start();
     }
-    public  void pause(View v){
-        if(player!=null) {
-            player.pause();
-        }
-        runingAlphabets.stop();
-        runingWords.stop();
 
-    }
     public  void stop(View v)
     {
         stopPlayer();
