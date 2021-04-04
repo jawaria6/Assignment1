@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <animation-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/alphabets"
+    <item android:drawable="@drawable/alphabets3"
         android:duration="3000"></item>
     <item android:drawable="@drawable/a"
         android:duration="7000"></item>
@@ -33,7 +33,7 @@
     <item android:drawable="@drawable/o"
     android:duration="7000"></item>
     <item android:drawable="@drawable/p"
-    android:duration="13000"></item>
+    android:duration="12000"></item>
     <item android:drawable="@drawable/q"
     android:duration="7000"></item>
     <item android:drawable="@drawable/r"

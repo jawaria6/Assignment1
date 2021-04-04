@@ -31,4 +31,9 @@ ImageView imageView;
         Intent intent=new Intent(this,AnimalPiano.class);
         startActivity(intent);
     }
+
+    public void MoveToPoem(View view) {
+        Intent intent=new Intent(this,Poem.class);
+        startActivity(intent);
+    }
 }

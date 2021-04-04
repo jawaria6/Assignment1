@@ -98,7 +98,7 @@
         android:duration="2000"
         android:rotation="720"></item>
     <item android:drawable="@drawable/parrot"
-        android:duration="11000"
+        android:duration="10000"
         android:rotation="720"></item>
     <item android:drawable="@drawable/queen"
         android:duration="2000"

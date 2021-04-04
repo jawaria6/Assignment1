@@ -16,6 +16,7 @@
         app:layout_constraintTop_toTopOf="parent"
 
         android:numColumns="2"
-        android:horizontalSpacing="20dp"
+        android:horizontalSpacing="30dp"
+        android:verticalSpacing="20dp"
         />
 </LinearLayout>

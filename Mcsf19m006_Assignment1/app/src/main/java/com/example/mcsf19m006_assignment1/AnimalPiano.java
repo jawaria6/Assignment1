@@ -17,7 +17,7 @@ public class AnimalPiano extends AppCompatActivity {
     GridView gridView;
     MediaPlayer player;
 
-    int [] animals={R.drawable.cat,R.drawable.dog2,R.drawable.lion,R.drawable.goat,R.drawable.gorilla};
+    int [] animals={R.drawable.cat,R.drawable.dog2,R.drawable.lion,R.drawable.goat,R.drawable.gorilla,R.drawable.elephant,R.drawable.monkey,R.drawable.qual};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,6 +68,30 @@ public class AnimalPiano extends AppCompatActivity {
                             player.release();
                         }
                         player=MediaPlayer.create(AnimalPiano.this,R.raw.gorila);
+                        player.start();
+                        break;
+                    case 5:
+                        if(player!=null) {
+                            player.stop();
+                            player.release();
+                        }
+                        player=MediaPlayer.create(AnimalPiano.this,R.raw.elephant);
+                        player.start();
+                        break;
+                    case 6:
+                        if(player!=null) {
+                            player.stop();
+                            player.release();
+                        }
+                        player=MediaPlayer.create(AnimalPiano.this,R.raw.monkey);
+                        player.start();
+                        break;
+                    case 7:
+                        if(player!=null) {
+                            player.stop();
+                            player.release();
+                        }
+                        player=MediaPlayer.create(AnimalPiano.this,R.raw.quail);
                         player.start();
                         break;
 

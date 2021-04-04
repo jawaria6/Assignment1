@@ -14,20 +14,37 @@
         android:layout_height="wrap_content"
         android:contentDescription="TODO"></ImageView>
 
-    <Button
-        android:id="@+id/button3"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        tools:text="Contents"></TextView>
+    <ImageButton
+        android:id="@+id/alphabets"
+        android:layout_width="274dp"
+        android:layout_height="152dp"
+        android:clickable="true"
+
         android:onClick="Move"
+
+        android:src="@drawable/alphabets2"
         android:text="English Alphabets with words"
         tools:layout_editor_absoluteX="63dp"
         tools:layout_editor_absoluteY="250dp" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Animal Piano"
+    <ImageButton
+        android:id="@+id/piano"
+        android:layout_width="274dp"
+        android:layout_height="123dp"
         android:onClick="MoveToPiano"
-        />
+        android:src="@drawable/piano2"
+        android:text="Animal Piano" />
+
+    <ImageButton
+        android:id="@+id/poem"
+        android:layout_width="274dp"
+        android:layout_height="201dp"
+        android:onClick="MoveToPoem"
+        android:src="@drawable/bismillah2"
+        android:text="Poem" />
 </LinearLayout>
