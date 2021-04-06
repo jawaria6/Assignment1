@@ -1,50 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context="com.example.mcsf19m006_assignment1.MainActivity"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_menu"
+        android:layout_gravity="start"></com.google.android.material.navigation.NavigationView>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="top"
-    tools:context=".MainActivity">
+    android:id="@+id/linear"
+    >
 
-    <ImageView
-        android:id="@+id/v"
+    <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:contentDescription="TODO"></ImageView>
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/toolbar"
+        android:background="@color/design_default_color_primary"
+        android:title="child App"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:elevation="4dp"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        tools:text="Contents"></TextView>
     <ImageButton
-        android:id="@+id/alphabets"
-        android:layout_width="274dp"
-        android:layout_height="152dp"
-        android:clickable="true"
-
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:onClick="Move"
-
         android:src="@drawable/alphabets2"
-        android:text="English Alphabets with words"
-        tools:layout_editor_absoluteX="63dp"
-        tools:layout_editor_absoluteY="250dp" />
-
+        ></ImageButton>
     <ImageButton
-        android:id="@+id/piano"
-        android:layout_width="274dp"
-        android:layout_height="123dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:onClick="MoveToPiano"
         android:src="@drawable/piano2"
-        android:text="Animal Piano" />
-
+        ></ImageButton>
     <ImageButton
-        android:id="@+id/poem"
-        android:layout_width="274dp"
-        android:layout_height="201dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:onClick="MoveToPoem"
         android:src="@drawable/bismillah2"
-        android:text="Poem" />
+        ></ImageButton>
+
 </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

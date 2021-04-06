@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +17,12 @@ public class AnimalPiano extends AppCompatActivity {
 
     GridView gridView;
     MediaPlayer player;
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        stopPlayer();
+    }
 
     int [] animals={R.drawable.cat,R.drawable.dog2,R.drawable.lion,R.drawable.goat,R.drawable.gorilla,R.drawable.elephant,R.drawable.monkey,R.drawable.qual};
     @Override
@@ -102,4 +109,12 @@ public class AnimalPiano extends AppCompatActivity {
         });
 
     }
+    public  void stopPlayer(){
+        if(player!=null){
+            player.release();
+            player=null;
+            Toast.makeText(this, "MediaPlayer Realeased", Toast.LENGTH_SHORT).show();
+        }
+    }
+
 }
